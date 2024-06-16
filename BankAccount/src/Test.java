@@ -4,10 +4,9 @@ public class Test {
 	public static void main(String[] args) {
 		BankAccount ba = new BankAccount();
 		CheckingAccount ca = new CheckingAccount();
-		
-		ba.deposit(1);
-		ba.withdrawal(0);
-		
+		// Testing BankAccount functions
+		ba.deposit(100);
+		ba.withdrawal(50);
 		ba.setFirstName("Steve");
 		ba.setLastName("Dimmit");
 		ba.setID(11111);
@@ -15,7 +14,7 @@ public class Test {
 		System.out.println(ba.getLastName());
 		System.out.println(ba.getID());
 		ba.accountSummary();
-		
+		//testing checking account functions
 		ca.setFirstName("Joe");
 		ca.setLastName("Smith");
 		ca.setID(222);
@@ -23,10 +22,6 @@ public class Test {
 		ca.deposit(100);
 		ca.processWithdrawal(110);
 		ca.displayAccount();
-		
-		
-		
-		
 	}
 
 }

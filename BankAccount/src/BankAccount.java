@@ -14,12 +14,12 @@ public class BankAccount {
 //	deposit() - will accept a single value double parameter; the parameter value is added to the existing balance
 	public void deposit(double deposit) {
 		this.balance = deposit + this.balance;
-		System.out.println("Deposit Successful");
+		System.out.println("Deposit Successful.  Balance: $" + this.balance);
 	}
 //	withdrawal() - accepts a single value double dollar amount; the parameter value is subtracted from the existing balance
 	public void withdrawal(double withdrawl) {
 		this.balance = this.balance - withdrawl;
-		System.out.println("Withdrawl Successfull");
+		System.out.println("Withdrawl Successfull.  Balance: $" + this.balance);
 	}
 //	Setters and getters for firstName, lastName, and accountID
 	public void setFirstName(String name) {
@@ -50,6 +50,6 @@ public class BankAccount {
 	public void accountSummary() {
 		System.out.println(this.firstName + " " + this.lastName + "'s Bank Account");
 		System.out.println("Account ID: " + this.accountID);
-		System.out.println("Balance: " + this.balance);
+		System.out.println("Balance: $" + this.balance);
 	}
 }

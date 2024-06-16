@@ -14,18 +14,18 @@ public class CheckingAccount extends BankAccount {
 //
 //	processWithdrawal() - will display a negative balance that includes a $30 overdraft fee and denotes that a fee has been accessed
 	public void processWithdrawal(double withdrawal) {
-		System.out.println("HI");
 		if (this.balance - withdrawal < 0) {
-			super.withdrawal(withdrawal);  // go thru with withdrawal
-			this.balance = this.balance - 30.00; // subtract extra 30 for overdraft
-			System.out.println("30 dollar overdraft fee charged.  Balance: " + this.balance);
+			super.withdrawal(withdrawal + 30.0);  // go thru with withdrawal adding 30 for the overdraft charge
+			System.out.println("30 dollar overdraft fee charged.");
 		}  else {
 			super.withdrawal(withdrawal);
 		}
 	}
 //	displayAccount() - should display all superclass attributes and provides an additional interest rate
 	public void displayAccount() {
-		super.accountSummary();
+		System.out.println(this.firstName + " " + this.lastName + "'s Checking Account");
+		System.out.println("Account ID: " + this.accountID);
+		System.out.println("Balance: $" + this.balance);
 		System.out.println("Interest Rate: " + interestRate);
 	}
 }
