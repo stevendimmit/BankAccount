@@ -3,7 +3,7 @@ public class CheckingAccount extends BankAccount {
 //	will store interest rate and count overdrafts
 	protected double interestRate;
 	protected int overdrafts;
-//	Allows overdraft withdrawals and charges a $30 fee
+
 	public CheckingAccount() {
 		super();
 		this.interestRate = 0;
@@ -15,7 +15,7 @@ public class CheckingAccount extends BankAccount {
 	}
 //	processWithdrawal() - will display a negative balance that includes a $30 overdraft fee and denotes that a fee has been accessed
 	public void processWithdrawal(double withdrawal) {
-		if (this.balance - withdrawal < 0) {
+		if (this.balance - withdrawal < 0) {  // if resulting withdrawal causes overdraft
 			super.withdrawal(withdrawal + 30.0);  // go thru with withdrawal adding 30 for the overdraft charge
 			System.out.println("30 dollar overdraft fee charged.");
 			this.overdrafts = this.overdrafts + 1;

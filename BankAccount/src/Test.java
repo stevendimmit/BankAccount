@@ -19,6 +19,9 @@ public class Test {
 		ca.setLastName("Smith");
 		ca.setID(222);
 		ca.setInterestRate(0.05);
+		System.out.println(ca.getFirstName());
+		System.out.println(ca.getLastName());
+		System.out.println(ca.getID());
 		ca.deposit(100);
 		ca.processWithdrawal(110);
 		ca.displayAccount();
