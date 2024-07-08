@@ -25,9 +25,7 @@ public class CheckingAccount extends BankAccount {
 	}
 //	displayAccount() - should display all superclass attributes and provides an additional interest rate
 	public void displayAccount() {
-		System.out.println(this.firstName + " " + this.lastName + "'s Checking Account");
-		System.out.println("Account ID: " + this.accountID);
-		System.out.println("Balance: $" + this.balance);
+		super.accountSummary();
 		System.out.println("Interest Rate: " + this.interestRate);
 		System.out.println("Overdrafts: " + this.overdrafts);
 	}
